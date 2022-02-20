@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: rgb(146, 161, 173);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.object {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    animation-name: anim-blue-car;
+    animation-delay: 0.5s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode:none ;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes anim-blue-car {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%; 
+    }
+}
+
+.yellow-car {
+    animation-name: anim-yellow-car;
+    transform: rotateY(180deg);
+    top: 200px;
+}
+
+@keyframes anim-yellow-car {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
